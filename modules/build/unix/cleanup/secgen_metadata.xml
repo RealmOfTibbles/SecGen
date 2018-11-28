@@ -30,8 +30,12 @@
   <default_input into="disable_ssh">
     <value>false</value>
   </default_input>
-
+  
+  <default_input into="clean_vagrant_directory">
+           <value>false</value>
+  </default_input>   
+         
   <requires>
     <module_path>utilities/unix/system/accounts</module_path>
-  </requires>
+  </requires>         
 </build>
