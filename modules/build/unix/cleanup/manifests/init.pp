@@ -35,4 +35,11 @@ class cleanup::init {
       command => "/bin/bash -c 'history -c && history -w'"
     }
   }
+  #  remove the vagrant traces
+  if $clean_vagrant_directory{
+    exec { 'remove /vagrant' :
+      command => "/bin/bash -c 'rm -rf /vagrant'"
+      }
+  }
+
 }
